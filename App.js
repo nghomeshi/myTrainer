@@ -6,8 +6,8 @@ import { createStackNavigator } from 'react-navigation'
 
 // Create the navigator
 const navigator = createStackNavigator({
-  Main: { screen: Main },
-  Chat: { screen: Chat },
+	Main: { screen: Main },
+	Chat: { screen: Chat },
 });
 
 // Export it as the root component
