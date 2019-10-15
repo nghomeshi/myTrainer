@@ -3,8 +3,7 @@ import React from 'react';
 import { View, Platform, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat'; // 0.3.0
 import KeyboardSpacer from 'react-native-keyboard-spacer';
-
-import Fire from '../Fire';
+import Fire from '../../Fire';
 
 
 type Props = {

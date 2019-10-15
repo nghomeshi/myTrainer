@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	StyleSheet,
-	Text,
-	TextInput,
-	TouchableOpacity,
-	View,
-} from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 class Main extends React.Component {
 	static navigationOptions = {
