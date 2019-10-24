@@ -3,18 +3,18 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View, Button } from 'rea
 
 class LoginScreen extends React.Component {
     static navigationOptions = {
-        title: 'Please sign in or register.'
+        title: 'Sign in or register'
     };
 
-    userState = {
-        name: '',
-        password: ''
-    };
+    state = {
+        username: '',
+        password: '',
+    }
 
     onPress = () =>
-        this.props.navigation.navigate('Chat', { name: this.userState.name });
+        this.props.navigation.navigate('Chat', { name: this.state.username });
 
-    render () {
+    render() {
         return (
             <View style={styles.container}>
                 <View style={styles.card}>
@@ -22,12 +22,14 @@ class LoginScreen extends React.Component {
                     <TextInput
                         style={styles.inputField}
                         placeholder='name...'
-                        value={this.userState.name}
+                        onChangeText={(username) => this.setState({username})}
+                        value={this.state.username}
                     />
                     <TextInput
                         style={styles.inputField}
                         placeholder='Password...'
-                        value={this.userState.password}
+                        onChangeText={(password) => this.setState({password})}
+                        value={this.state.password}
                     />
                     <View style={{flexDirection: 'row'}}>
                         <TouchableOpacity onPress={this.onPress}>
