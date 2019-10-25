@@ -1,6 +1,6 @@
 // @flow
-import React from 'react';
-import { View, Platform, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import React, { Component } from 'react';
+import { ActivityIndicator, View, Platform, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat'; // 0.3.0
 import KeyboardSpacer from 'react-native-keyboard-spacer';
 import Fire from '../../Fire';
@@ -11,7 +11,7 @@ type Props = {
 };
 
 
-class Chat extends React.Component<Props> {
+export default class Chat extends React.Component<Props> {
 
 	static navigationOptions = ({ navigation }) => ({
 		title: (navigation.state.params || {}).name || 'Chat!',
@@ -70,4 +70,4 @@ class Chat extends React.Component<Props> {
 	}
 }
 
-export default Chat;
+// export default Chat;

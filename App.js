@@ -3,7 +3,11 @@ import Main from './src/components/Main';
 import Chat from './src/components/Chat';
 import LoginScreen from './src/screens/LoginScreen';
 // Import React Navigation
-import { createStackNavigator } from 'react-navigation';
+import React from 'react';
+import { Platform } from 'react-native';
+import { createStackNavigator, createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { Ionicons } from '@expo/vector-icons';
+
 
 // Create the navigator
 const navigator = createStackNavigator({

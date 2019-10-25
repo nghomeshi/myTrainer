@@ -1,8 +1,8 @@
-import React from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { Component } from 'react';
+import { ActivityIndicator, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { Button } from 'react-native-elements';
 
-class LoginScreen extends React.Component {
+export default class LoginScreen extends Component {
     static navigationOptions = {
         title: 'Sign in or register'
     };
@@ -96,4 +96,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default LoginScreen;
+// export default LoginScreen;
