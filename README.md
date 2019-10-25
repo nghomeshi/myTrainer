@@ -24,6 +24,12 @@ The objective of this application is to create a platform where:
 
 <br>
 
+
+## Environment Set-up
+    npm install react-native-elements
+    npm install react-native-vector-icons
+
+
 ## Authors
 Christian Sarmiento
 <br> Michael Somoza

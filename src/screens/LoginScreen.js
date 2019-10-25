@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View, Button } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Button } from 'react-native-elements';
 
 class LoginScreen extends React.Component {
     static navigationOptions = {
@@ -9,6 +10,7 @@ class LoginScreen extends React.Component {
     state = {
         username: '',
         password: '',
+        errorMessage: null
     }
 
     onPress = () =>
@@ -31,13 +33,19 @@ class LoginScreen extends React.Component {
                         onChangeText={(password) => this.setState({password})}
                         value={this.state.password}
                     />
-                    <View style={{flexDirection: 'row'}}>
-                        <TouchableOpacity onPress={this.onPress}>
-                            <Text style={styles.leftButton}>Login</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={this.onPress}>
-                            <Text style={styles.rightButton}>Register</Text>
-                        </TouchableOpacity>
+                    <View style={styles.buttonRow}>
+                        <Button
+                            title='Log in'
+                            type='solid'
+                            onPress={this.onPress}
+                            style={styles.buttons}
+                        />
+                        <Button
+                            title='Sign up'
+                            type='solid'
+                            onPress={this.onPress}
+                            stlye={styles.buttons}
+                        />
                     </View>
                 </View>
             </View>
@@ -76,22 +84,16 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderColor: 'gray'
     },
-    leftButton: {
+    buttonRow: {
         flexDirection: 'row',
-        borderTopWidth: 0.5,
-        borderRightWidth: 0.5,
-        fontSize: 24,
-        // flex: 5
-
+        justifyContent: 'space-between',
+        paddingHorizontal: 40,
+        paddingTop: 10,
     },
-    rightButton: {
-        flexDirection: 'row',
-        borderWidth: 0.5,
-        borderBottomWidth: 0,
-        // borderLeftWidth: 0.5,
-        fontSize: 24,
-        // flex: 5
-    }
+    buttons: {
+        flex: 1,
+        // borderWidth: 1
+    },
 });
 
 export default LoginScreen;
